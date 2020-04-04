@@ -28,10 +28,14 @@ class ApplicationPolicy
 
   def edit?
     update?
-  end
+  end 
 
   def destroy?
     false
+  end
+
+  def admin_types
+    ['AdminUser']
   end
 
   class Scope
