@@ -20,6 +20,7 @@ gem 'jquery-ui-rails'
 gem 'popper_js', '~> 1.16'
 
 gem 'bootstrap-sass'
+gem 'font-awesome-sass', '~> 5.12'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
