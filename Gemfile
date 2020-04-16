@@ -76,4 +76,5 @@ gem 'administrate', '~> 0.13.0'
 gem 'bourbon'
 gem 'pundit', '~> 2.1'
 gem 'twilio-ruby', '~> 5.33'
+gem 'phony', '~> 2.18', '>= 2.18.12'
 gem 'dotenv-rails', :groups => [:development, :test]
