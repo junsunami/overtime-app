@@ -9,12 +9,18 @@ namespace :notification do
     #User.all.each do |user|
      # SmsTool.send_sms()
     #end
-    #number: "555-555-3323"
-    #number: "5555553323"
-    #空白禁止
-    #10個のキャラクターを利用すること
-    #全てのキャラクターは数字を利用すること
+  end
 
+  desc "Send mail notification to managers (admin users) each day to inform of pending overtime requests"
+  task manager_email: :environment do
+    submitted_posts = Post.submitted
+    admin_users = AdminUser.all
+    
+    if submitted_posts.count > 0
+      admin_users.each do |admin|
+        ManagerMailer.email(admin).deliver_later
+      end
+    end
   end
 
 end
