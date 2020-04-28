@@ -56,7 +56,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://wlp-overtime-jun.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true 
   config.action_mailer.raise_delivery_errors = true
@@ -64,9 +64,9 @@ Rails.application.configure do
     :enable_starttls_auto => true,
     :address => "smtp.sendgrid.net",
     :port => 587,
-    :domain => 'smtp.sendgrid.net',
-    :user_name => "apikey",
-    :password => "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",
-    :authentication => :plain
+    :domain => 'heroku.com',
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :authentication => :plain 
   }
 end
