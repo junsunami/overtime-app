@@ -79,4 +79,3 @@ gem 'twilio-ruby', '~> 5.33'
 gem 'phony', '~> 2.18', '>= 2.18.12'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'kaminari', '~> 1.2'
-gem 'sendgrid-ruby'
