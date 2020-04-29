@@ -8,6 +8,7 @@ namespace :notification do
       #4. Send a message that has instructions and a link to log time
 
       employees.each do |employee|
+        AuditLog.create!(user_id: employee.id)
         SmsTool.send_sms(number: employee.phone, message: notification_message)
       end
     #end
